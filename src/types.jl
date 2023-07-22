@@ -222,7 +222,7 @@ function to check that the local optimizer chosen is available.
 function is_local_optimizer(s::Symbol)
 
 	# source: https://github.com/robertfeldt/BlackBoxOptim.jl/blob/master/examples/benchmarking/latest_toplist.csv
-	listValidLocalOptimizers = [:NelderMead, :SimulatedAnnealing, :ParticleSwarm,
+	listValidLocalOptimizers = [:NelderMead, :SimulatedAnnealing, :ParticleSwarm, :SAMIN, 
 								:BFGS, :LBFGS, :ConjugateGradient, :GradientDescent,
 								:MomentumGradientDescent, :AcceleratedGradientDescent]
 
@@ -239,7 +239,7 @@ function is_optim_optimizer(s::Symbol)
 
 	# source: https://github.com/robertfeldt/BlackBoxOptim.jl/blob/master/examples/benchmarking/latest_toplist.csv
 	listOptimOptimizers = [:NelderMead, :SimulatedAnnealing, :ParticleSwarm,
-							:BFGS, :LBFGS, :ConjugateGradient, :GradientDescent,
+							:BFGS, :LBFGS, :ConjugateGradient, :GradientDescent, :SAMIN, 
 							:MomentumGradientDescent, :AcceleratedGradientDescent]
 
 	in(s, listOptimOptimizers)
