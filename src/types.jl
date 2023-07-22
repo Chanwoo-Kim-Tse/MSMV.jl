@@ -53,7 +53,7 @@ function MSMOptions( ;
 
 	#Fminbox does not work with all optimizers in Optim
 	if minBox == true
-		listValidLocalOptimizers = [:GradientDescent, :BFGS, :LBFGS, :ConjugateGradient]
+		listValidLocalOptimizers = [:GradientDescent, :BFGS, :LBFGS, :ConjugateGradient, :SAMIN]
 		if in(localOptimizer, listValidLocalOptimizers) == false
 			error("if minBox == true, localOptimizer must be in $(listValidLocalOptimizers)")
 		end
